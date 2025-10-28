@@ -15,6 +15,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PARCIAL_2.Formularios
 {
+    //AUTOEVALUACION: 8
+    //William Ismael Zavala Alvarenga
     public partial class frmRegistrarNota : Form
     {
         //Conexion

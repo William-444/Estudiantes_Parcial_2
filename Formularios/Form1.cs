@@ -66,9 +66,9 @@ namespace PARCIAL_2.Formularios
                 return;
             }
 
-            //Comvertimos a mayusculas
-            string Nombre = txtNombre.Text.Trim().ToUpper();
-            string Codigo = txtCodigo.Text.Trim().ToUpper();
+            //Convertimos a mayusculas
+            string nombre = txtNombre.Text.Trim().ToUpper();
+            string codigo = txtCodigo.Text.Trim().ToUpper();
 
             // validamos el rango de las notas (0 - 10)
             if (!decimal.TryParse(txtLaboratorio.Text, out decimal laboratorio) ||

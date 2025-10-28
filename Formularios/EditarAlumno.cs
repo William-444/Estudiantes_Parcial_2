@@ -110,5 +110,15 @@ namespace PARCIAL_2.Formularios
         {
             this.Close();
         }
+
+        private void lblLaboratorio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

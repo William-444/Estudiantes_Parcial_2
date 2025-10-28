@@ -66,6 +66,10 @@ namespace PARCIAL_2.Formularios
                 return;
             }
 
+            //Comvertimos a mayusculas
+            string Nombre = txtNombre.Text.Trim().ToUpper();
+            string Codigo = txtCodigo.Text.Trim().ToUpper();
+
             // validamos el rango de las notas (0 - 10)
             if (!decimal.TryParse(txtLaboratorio.Text, out decimal laboratorio) ||
                 !decimal.TryParse(txtParcial.Text, out decimal parcial) ||
@@ -101,7 +105,7 @@ namespace PARCIAL_2.Formularios
                 uow.Alumno.Insert(alumno);
                 uow.Commit();
 
-                MessageBox.Show("Usuario guardado correctamente. ");
+                MessageBox.Show("Alumno guardado correctamente. ");
 
                 LimpiarCampos();
                 CargarAlumno();
@@ -137,6 +141,13 @@ namespace PARCIAL_2.Formularios
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            if (usuarioSeleccionadoId == 0)
+            {
+                MessageBox.Show("Seleccione el usuario para eliminar. ");
+                return;
+            }
+
+            var confirmar = MessageBox.Show("¿Esta seguro que desea eliminar este usuario?", "Confirmar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
         }
     }
